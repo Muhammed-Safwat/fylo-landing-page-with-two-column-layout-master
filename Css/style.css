@@ -1,0 +1,375 @@
+:root{
+    --Headings-font:'Raleway';
+    --body-font:'Open Sans';
+}
+*{
+    margin:0 ;
+    padding:0;
+    box-sizing: border-box;
+    font-size:18px;
+    line-height:1.4;
+    font-family: var(--body-font);
+}
+.contanier{
+    width:80%;
+    margin:0 auto;
+}
+.header .contanier{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 0;
+}
+.header .contanier .links a {
+    text-decoration: none;
+    font-family: var(--Headings-font);
+    margin-right: 30px ;
+    color:hsl(243, 87%, 12%);
+}
+.header .contanier .links a:hover{
+    font-weight: bold;
+}
+.header .contanier .links :last-child {
+    margin-right: 0 ;
+}
+@media(max-width:678px){ 
+    .header .contanier .links a {
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .header .contanier img{
+        width: 100px;
+    }
+    .header .contanier .logo a img{
+        width: 60px;
+        margin: 10px 0 0;
+    }
+}
+.section-one{
+        margin-bottom: 250px;
+    margin-top: 25px;
+}
+.section-one .contanier ,.section-two .contanier {
+    padding:50px 0 ;
+    display: flex;
+    justify-content:space-between;
+    gap: 50px;
+}
+@media(max-width:992px){
+    .section-one .contanier ,.section-two .contanier{
+        flex-direction: column-reverse;
+    }
+}
+.contanier .image{
+    flex-basis: 50%;
+}
+.contanier .image img {
+    width: 100%;
+}
+.contanier .text{
+    flex-basis: 50%;
+}
+.contanier h1{
+    font-family: var(--Headings-font);
+    color:hsl(243, 87%, 12%);
+    margin:0;
+}
+.contanier p{
+    font-family: var(--body-font);
+    color:hsl(243, 87%, 12%);
+    margin: 20px 0;
+    max-width:600px;
+}
+.contanier form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contanier form input{
+    border: 2px solid #d9d9d9;
+    width: 95%;
+    height: 45px;
+    padding: 15px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.contanier form  button{
+    border: none;
+    width: 48%;
+    height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: hsl(224, 93%, 58%);
+    box-shadow: -2px 3px 6px 0px #00000052;
+    color: white;
+}
+.contanier form  button:hover ,.section-one .contanier form  button:active{
+        opacity: .8;
+}
+
+.contanier form  button:active > #s  {
+        display: block;
+}
+@media(max-width:992px){ 
+    .contanier .text h1 , .contanier .text p {
+        text-align: center;
+    }
+    .contanier form{
+        flex-direction: column;
+    }
+    .contanier form  button,.section-one .contanier form input{
+        width:95%;
+        margin: 15px auto;
+    }
+    .contanier h1{
+            font-size: 1.5em;
+    }
+    .contanier p{
+            font-size: .9em;
+            margin: 20px auto;
+    }
+}
+.section-two{
+    position: relative;
+    background-color:hsl(240, 75%, 98%);
+}
+.section-one .contanier p{
+            margin:20px 0 35px ;
+    }
+
+.section-two::before{
+    content: "";
+    background-image: url(../images/bg-curve-mobile.svg);
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: -100px;
+    z-index: 3;
+    background-size: cover;
+    background-position: center;
+} 
+@media(min-width:678px){ 
+    .section-two::before{
+            background-image: url(../images/bg-curve-desktop.svg);
+            top: -130px;
+            height: 130px;
+    }
+}
+.section-two .contanier .text .link{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: fit-content;
+}
+.section-two .contanier .text .link a{
+    text-decoration: none;
+    color: hsl(170, 45%, 43%);
+    padding-bottom: 2px;
+}
+.section-two .contanier .text .link::after{
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: hsl(170, 45%, 43%);
+    position: absolute;
+    bottom: -5px;
+}
+.section-two .contanier .text .box{
+background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px 0px  #7b7b7b15 ,
+    -2px -3px 10px 0px #7b7b7b15;
+    margin: 50px 0;
+    padding: 40px;
+    max-width: 450px;
+    line-height: 2;
+}
+.section-two .contanier .text .box p{
+        line-height: 1.8;
+            margin-top: 10px;
+}
+.section-two .contanier .text .box .user{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.section-two .contanier .text .box .user img{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.section-two .contanier .text .box .user :first-child{
+    margin: 0;
+    font-weight: bold;
+}
+.section-two .contanier .text .box .user :last-child{
+    margin: 0;
+    margin-top: -5px;
+    font-size: 14px;
+}
+@media(max-width:992px){ 
+.section-two .contanier .text p{
+            text-align: start;
+    }
+    .section-two .contanier .text .link{
+            margin: 0 auto;
+    }
+    .section-two .contanier .text .box{
+        margin: 50px auto;
+    }
+}
+.section-three{
+    background-color: hsl(238, 22%, 44%);
+    padding: 50px 0;
+    min-height: 330px;
+    align-items: center;
+    display: flex;
+}
+.section-three .contanier {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+}
+
+.section-three .contanier  form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.section-three .contanier  form .con {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:100%;
+    justify-content:start;
+}
+.section-three .contanier  form .con  ::after{
+    content: '';
+    color: red;
+    position: absolute;
+}
+.section-three .contanier form input{
+    width:100%;
+}
+.section-three .contanier .text{
+        min-width: 50%;
+}
+.section-three .contanier .text h1 ,
+.section-three .contanier .text  p {
+    color:white;
+}
+.email-input{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.email-input  span{
+    font-size: 10px;
+    display: none;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 20px;
+    color: white;
+}
+
+.section-three .contanier form button{
+        width: 60%;
+}
+@media(max-width:992px){ 
+    .section-three .contanier form .con{
+            flex-direction: column;
+}
+    .section-three .contanier{
+            flex-direction: column;
+            gap:20px;
+}
+.section-three .contanier form input , 
+.section-three .contanier form button {
+    width: 95%;
+    margin: 10px auto;
+}
+}
+@media (min-width:992px){
+    .section-three .contanier form button{
+        position: relative;
+        left: -20%;
+        margin-top:15px;
+    }
+}
+.footer{
+    padding: 45px 0;
+    color:white;
+    background-color:  hsl(243, 87%, 12%);
+}
+.footer .contanier{
+    display: flex;
+    margin-top: 20px;
+}
+.conect-us i {
+    margin-right:10px;
+}
+.footer .conect-us{
+    flex-basis: 30%;
+}
+.footer .links{
+    flex-basis: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 80px;
+}
+.footer .links a{
+        flex-basis: 50%; 
+        text-decoration: none;
+            color:white;
+                margin:  0px 0 15px;
+}
+.footer .social-media {
+        flex-basis: 20%;
+        text-align: end;
+}
+.footer .contanier div {
+    margin:  0px 0 15px;
+}   
+.footer .contanier .social-media i{
+    margin-left:10px;
+    padding:6px;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.footer .contanier img{
+    max-width:200px;
+    margin:20px 0;
+}
+.footer .contanier .social-media i:hover{
+    color: hsl(224, 93%, 58%);
+    border-color:hsl(224, 93%, 58%);
+    cursor: pointer;
+}
+.footer  .contanier .links a:hover{
+    font-weight: bold;
+    color: hsl(224, 93%, 58%);
+}
+@media(max-width:992px){ 
+    .footer .contanier{
+    flex-direction: column;
+}
+
+.footer .links{
+    flex-direction: column;
+    padding: 0;
+}
+.footer .social-media {
+    text-align:center;
+}
+
